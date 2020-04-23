@@ -1,13 +1,14 @@
 # matlab
 Matlab for Beginner by Dr Zool
 ------------------------------------------------------------------------------------------------------------------------------
-Chapter 1: 
-Tutorial lessons 1
+Chapter 1: Tutorial lessons 1
 
 1.1	Introduction
+
 The tutorials are independent of the rest of the document. The primarily objective is to help you learn quickly the flrst steps. The emphasis here is \learning by doing". Therefore, the best way to learn is by trying it yourself. Working through the examples will give you a feel for the way that MATLAB operates. In this introduction we will describe how MATLAB handles simple numerical expressions and mathematical formulas. The name MATLAB stands for MATrix LABoratory. MATLAB was written originally to provide easy access to matrix software developed by the LINPACK (linear system package) and EISPACK (Eigen system package) projects.
 
 1.2	A minimum MATLAB session
+
 The goal of this minimum session (also called starting and exiting sessions) is to learn the first steps:
 - How to log on
 - Invoke MATLAB
@@ -15,6 +16,7 @@ The goal of this minimum session (also called starting and exiting sessions) is 
 - How to quit MATLAB
 
 1.3.1	Starting MATLAB
+
 After logging into your account, you can enter MATLAB by double-clicking on the MATLAB shortcut icon on your Windows desktop. When you start MATLAB, a special window called the MATLAB desktop appears. The desktop is a window that contains other windows. The major tools within or accessible from the desktop are:
 
 - The Command Window
@@ -32,6 +34,7 @@ EDU>	for educational version
 Note: To simplify the notation, we will use this prompt, >>, as a standard prompt sign, though our MATLAB version is for educational purpose.
 
 1.3.2	Using MATLAB as a calculator
+
 As an example of a simple interactive calculation, just type the expression you want to evaluate. Let’s start at the very beginning. For example, let’s suppose you want to calculate the expression, 1 + 2 x 3. You type it at the prompt command (>>) as follows,
 
 >>	1+2*3 
@@ -51,6 +54,7 @@ Before we conclude this minimum session, Table 1.1 gives the partial list of ari
 -	Division	2/3
 		
 1.3.3	Quitting MATLAB
+
 To end your MATLAB session, type quit in the Command Window, or select File then Exit MATLAB in the desktop main menu.
 
 1.4	Getting started
