@@ -5,27 +5,24 @@ Chapter 1:
 Tutorial lessons 1
 
 1.1	Introduction
-
-The tutorials are independent of the rest of the document. The primarily objective is to help you learn quickly the flrst steps. The emphasis here is \learning by doing". Therefore, the best way to learn is by trying it yourself. Working through the examples will give you a feel for the way that MATLAB operates. In this introduction we will describe how MATLAB handles simple numerical expressions and mathematical formulas.
-The name MATLAB stands for MATrix LABoratory. MATLAB was written originally to provide easy access to matrix software developed by the LINPACK (linear system package) and EISPACK (Eigen system package) projects.
+The tutorials are independent of the rest of the document. The primarily objective is to help you learn quickly the flrst steps. The emphasis here is \learning by doing". Therefore, the best way to learn is by trying it yourself. Working through the examples will give you a feel for the way that MATLAB operates. In this introduction we will describe how MATLAB handles simple numerical expressions and mathematical formulas. The name MATLAB stands for MATrix LABoratory. MATLAB was written originally to provide easy access to matrix software developed by the LINPACK (linear system package) and EISPACK (Eigen system package) projects.
 
 1.2	A minimum MATLAB session
-
 The goal of this minimum session (also called starting and exiting sessions) is to learn the flrst steps:
-†	How to log on
-†	Invoke MATLAB
-†	Do a few simple calculations
-†	How to quit MATLAB
+- How to log on
+- Invoke MATLAB
+- Do a few simple calculations
+- How to quit MATLAB
 
 1.3.1	Starting MATLAB
 After logging into your account, you can enter MATLAB by double-clicking on the MATLAB shortcut icon (MATLAB 7.0.4) on your Windows desktop. When you start MATLAB, a special window called the MATLAB desktop appears. The desktop is a window that contains other windows. The major tools within or accessible from the desktop are:
 
-†	The Command Window
-†	The Command History
-†	The Workspace
-†	The Current Directory
-†	The Help Browser
-†	The Start button
+- The Command Window
+- The Command History
+- The Workspace
+- The Current Directory
+- The Help Browser
+- The Start button
  
 When MATLAB is started for the flrst time, the screen looks like the one that shown in the Figure 1.1. This illustration also shows the default conflguration of the MATLAB desktop. You can customize the arrangement of tools and documents to suit your needs.
 Now, we are interested in doing some simple calculations. We will assume that you have su–cient understanding of your computer under which MATLAB is being run.
@@ -962,126 +959,3 @@ To correct errors in an M-flle,
 †	Save the M-flle
 †	Clear breakpoints
 †	Run the M-flle again to be sure it produces the expected results. For details on debugging process, see MATLAB documentation.
-
------------------------------------------------------------------------------------------------------------------------------------
-Appendix A
-Summary of commands
-
-Table A.1: Arithmetic operators and special characters
-Character	Description
-+	Addition
-¡	Subtraction
-⁄	Multiplication (scalar and array)
-=	Division (right)
-^	Power or exponentiation
-:	Colon; creates vectors with equally spaced elements
-;	Semi-colon; suppresses display; ends row in array
-,	Comma; separates array subscripts
-. . .	Continuation of lines
-%	Percent; denotes a comment; specifles output format
-0	Single quote; creates string; specifles matrix transpose
-=	Assignment operator
-( )	Parentheses; encloses elements of arrays and input arguments
-[ ]	Brackets; encloses matrix elements and output arguments
-	
-Table A.2: Array operators
-Character	Description
-:⁄	Array multiplication
-:=	Array (right) division
-.^	Array power
-:n	Array (left) division
-:0	Array (nonconjugated) transpose
-
-Table A.3: Relational and logical operators
-Character	Description
-<	Less than
-•	Less than or equal to
->	Greater than
-‚	Greater than or equal to
-==	Equal to
-»=	Not equal to
-&	Logical or element-wise AND
-j	Logical or element-wise OR
-&&	Short-circuit AND
-j j	Short-circuit OR
-
-Table A.4: Managing workspace and flle commands
-Command	Description
-cd	Change current directory
-clc	Clear the Command Window
-clear (all)	Removes all variables from the workspace
-clear x	Remove x from the workspace
-copyfile	Copy flle or directory
-delete	Delete flles
-dir	Display directory listing
-exist	Check if variables or functions are deflned
-help	Display help for MATLAB functions
-lookfor	Search for specifled word in all help entries
-mkdir	Make new directory
-movefile	Move flle or directory
-pwd	Identify current directory
-rmdir	Remove directory
-type	Display contents of flle
-what	List MATLAB flles in current directory
-which	Locate functions and flles
-who	Display variables currently in the workspace
-whos	Display information on variables in the workspace
-	
-Table A.5: Predeflned variables and math constants
-Variable	Description
-ans	Value of last variable (answer)
-eps	Floating-point relative accuracy
-i	Imaginary unit of a complex number
-Inf	Inflnity (1)
-eps	Floating-point relative accuracy
-j	Imaginary unit of a complex number
-NaN	Not a number
-pi	The number … (3:14159 : : :)
-	
-Table A.6: Elementary matrices and arrays
-Command	Description
-eye	Identity matrix
-linspace	Generate linearly space vectors
-ones	Create array of all ones
-rand	Uniformly distributed random numbers and arrays
-zeros	Create array of all zeros
-				
-Table A.7: Arrays and Matrices: Basic information
-  Command	Description	
-	disp	Display text or array	
-	isempty	Determine if input is empty matrix	
-	isequal	Test arrays for equality	
-	length	Length of vector	
-	ndims	Number of dimensions	
-	numel	Number of elements	
-	size	Size of matrix	
-				
-Table A.8: Arrays and Matrices: operations and manipulation
-Command	Description
-cross	Vector cross product
-diag	Diagonal matrices and diagonals of matrix
-dot	Vector dot product
-end	Indicate last index of array
-find	Find indices of nonzero elements
-kron	Kronecker tensor product
-max	Maximum value of array
-min	Minimum value of array
-prod	Product of array elements
-reshape	Reshape array
-sort	Sort array elements
-sum	Sum of array elements
-size	Size of matrix
-	
-Table A.9: Arrays and Matrices: matrix analysis and linear equations
-Command	Description
-cond	Condition number with respect to inversion
-det	Determinant
-inv	Matrix inverse
-linsolve	Solve linear system of equations
-lu	LU factorization
-norm	Matrix or vector norm
-null	Null space
-orth	Orthogonalization
-rank	Matrix rank
-rref	Reduced row echelon form
-trace	Sum of diagonal elements
