@@ -24,18 +24,15 @@ After logging into your account, you can enter MATLAB by double-clicking on the 
 - The Help Browser
 - The Start button
  
-When MATLAB is started for the flrst time, the screen looks like the one that shown in the Figure 1.1. This illustration also shows the default conflguration of the MATLAB desktop. You can customize the arrangement of tools and documents to suit your needs.
-Now, we are interested in doing some simple calculations. We will assume that you have su–cient understanding of your computer under which MATLAB is being run.
-You are now faced with the MATLAB desktop on your computer, which contains the prompt (>>) in the Command Window. Usually, there are 2 types of prompt:
+Now, we are interested in doing some simple calculations. We will assume that you have su–cient understanding of your computer under which MATLAB is being run. You are now faced with the MATLAB desktop on your computer, which contains the prompt (>>) in the Command Window. Usually, there are 2 types of prompt:
 
 >>	for full version
 EDU>	for educational version
 
 Note: To simplify the notation, we will use this prompt, >>, as a standard prompt sign, though our MATLAB version is for educational purpose.
 
-
 1.3.2	Using MATLAB as a calculator
-As an example of a simple interactive calculation, just type the expression you want to evaluate. Let’s start at the very beginning. For example, let’s suppose you want to calculate the expression, 1 + 2 £ 3. You type it at the prompt command (>>) as follows,
+As an example of a simple interactive calculation, just type the expression you want to evaluate. Let’s start at the very beginning. For example, let’s suppose you want to calculate the expression, 1 + 2 x 3. You type it at the prompt command (>>) as follows,
 
 >>	1+2*3 
 
