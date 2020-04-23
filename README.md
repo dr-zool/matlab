@@ -201,27 +201,18 @@ Note - At this particular time of our study, it is important to emphasize one ma
 >>	help sqrt
 
 †	In the current version (MATLAB version 7), the doc function opens the on-line version of the help manual. This is very helpful for more complex commands.
-
 >>	doc plot
- 
 †	Use lookfor to find functions by keywords. The general form is
-
 >>	lookfor FunctionName
 
-
 -------------------------------------------------------------------------------------------------------------------------------
-Chapter 2
-
-Tutorial lessons 2
+Chapter 2: Tutorial lessons 2
 
 2.1	Mathematical functions
-
 MATLAB offers many predeflned mathematical functions for technical computing which contains a large set of mathematical functions.
 
 Typing help elfun and help specfun calls up full lists of elementary and special functions respectively. There is a long list of mathematical functions that are built into MATLAB. These functions are called built-ins. Many standard mathematical functions, such as sin(x), cos(x), tan(x), ex, ln(x), are evaluated by the functions sin, cos, tan, exp, and log respectively in
-MATLAB.
-
-Table below lists some commonly used functions, where variables x and y can be numbers, vectors, or matrices.
+MATLAB. Table below lists some commonly used functions, where variables x and y can be numbers, vectors, or matrices.
 
 Elementary functions
 cos(x)	Cosine	abs(x)	Absolute value
@@ -245,12 +236,7 @@ Inf     : Infinity
 NaN	: Not a number
 
 2.1.1	Examples
-
-We illustrate here some typical examples which related to the elementary functions previously deflned.
-
-As a flrst example, the value of the expression y = e¡a sin(x) + 10py, for a = 5, x = 2, and y = 8 is computed by
-
-
+We illustrate here some typical examples which related to the elementary functions previously deflned. As a first example, the value of the expression y = e¡a sin(x) + 10py, for a = 5, x = 2, and y = 8 is computed by
 >>	a = 5; x = 2; y = 8;
 >>	y = exp(-a)*sin(x)+10*sqrt(y);
 
@@ -267,7 +253,6 @@ ans = 0.7071
 ans = 2.2026e+004
 
 2.2	Basic plotting
-
 2.2.1	Overview
 MATLAB has an excellent set of graphic tools. Plotting a given data set or the results of computation is possible with very few commands. You are highly encouraged to plot mathematical functions and results of analysis as often as possible. Trying to understand mathematical equations with graphics is an enjoyable and very e–cient way of learning math-ematics. Being able to plot mathematical functions and data freely is the most important step, and this section is written to assist you to do just that.
 
@@ -292,7 +277,6 @@ Notes:
 †	If you omit the increment, MATLAB automatically increments by 1.
 
 2.2.3	Adding titles, axis labels, and annotations
-
 MATLAB enables you to add axis labels and titles. For example, using the graph from the previous example, add an x- and y-axis labels.
 Now label the axes and add a title. The character \pi creates the symbol …. An example of 2D plot is shown in Figure 2.2.
  
@@ -303,7 +287,6 @@ Now label the axes and add a title. The character \pi creates the symbol …. An
 The color of a single curve is, by default, blue, but other colors are possible. The desired color is indicated by a third argument. For example, red is selected by plot(x,y,’r’). Note the single quotes, ’ ’, around r.
 
 2.2.4	Multiple data sets in one plot
-
 Multiple (x; y) pairs arguments create multiple graphs with a single call to plot. For example, these statements plot three related functions of x: y1 = 2 cos(x), y2 = cos(x), and y3 = 0:5 ⁄ cos(x), in the interval 0 • x • 2….
 
 >>	x = 0:pi/100:2*pi;
@@ -321,16 +304,13 @@ The result of multiple data sets in one graph plot is shown in Figure 2.3.
 
 By default, MATLAB uses line style and color to distinguish the data sets plotted in the graph. However, you can change the appearance of these graphic components or add annotations to the graph to help explain your data for presentation.
 
-
 2.2.5	Specifying line styles and colors
-
 It is possible to specify line styles, colors, and markers (e.g., circles, plus signs, . . . ) using the plot command:  plot(x,y,’style_color_marker’)
 where style_color_marker is a triplet of values from Table 2.3.
 
 To find additional information, type help plot or doc plot.
 
 Attributes for plot
-
 Symbol	Color	Symbol	Line Style	Symbol	Marker
 k	Black	¡	Solid	+	Plus sign
 r	Red	¡¡	Dashed	o	Circle
@@ -341,11 +321,7 @@ m	Magenta			s	Square
 y	Yellow			d	Diamond
 					
 2.4	Introduction
-
-Matrices are the basic elements of the MATLAB environment. A matrix is a two-dimensional array consisting of m rows and n columns. Special cases are column vectors (n = 1) and row vectors (m = 1).
-In this section we will illustrate how to apply difierent operations on matrices. The following topics are discussed: vectors and matrices in MATLAB, the inverse of a matrix, determinants, and matrix manipulation.
-MATLAB supports two types of operations, known as matrix operations and array opera-tions. Matrix operations will be discussed flrst.
-
+Matrices are the basic elements of the MATLAB environment. A matrix is a two-dimensional array consisting of m rows and n columns. Special cases are column vectors (n = 1) and row vectors (m = 1). In this section we will illustrate how to apply difierent operations on matrices. The following topics are discussed: vectors and matrices in MATLAB, the inverse of a matrix, determinants, and matrix manipulation. MATLAB supports two types of operations, known as matrix operations and array operations. Matrix operations will be discussed first.
 
 2.5	Matrix generation
 Matrices are fundamental to MATLAB. Therefore, we need to become familiar with matrix generation and manipulation. Matrices can be generated in several ways.
@@ -380,9 +356,7 @@ produces a column vector, whereas writing
 
 produces a row vector.
 
-
 2.5.2	Entering a matrix
-
 A matrix is an array of numbers. To type a matrix into MATLAB you must
 
 †	begin with a square bracket, [
@@ -411,7 +385,6 @@ A(2,1) is an element located in the second row and flrst column. Its value is 4.
 
 
 2.5.3	Matrix indexing
-
 We select elements in a matrix just as we did for vectors, but now we need two indices. The element of row i and column j of the matrix A is denoted by A(i,j). Thus, A(i,j) in MATLAB refers to the element Aij of matrix A. The flrst index is the row number and the second index is the column number. For example, A(1,3) is an element of flrst row and third column. Here, A(1,3)=3.
 
 Correcting any entry is easy through indexing. Here we substitute A(3,3)=9 by A(3,3)=0. The result is
@@ -420,12 +393,8 @@ Correcting any entry is easy through indexing. Here we substitute A(3,3)=9 by A(
 
 Single elements of a matrix are accessed as A(i,j), where i ‚ 1 and j ‚ 1. Zero or negative subscripts are not supported in MATLAB.
 
-
 2.5.4	Colon operator
-
-The colon operator will prove very useful and understanding how it works is the key to e–cient and convenient usage of MATLAB. It occurs in several difierent forms.
-
-Often we must deal with matrices or vectors that are too large to enter one ele-ment at a time. For example, suppose we want to enter a vector x consisting of points (0; 0:1; 0:2; 0:3; ¢ ¢ ¢ ; 5). We can use the command
+The colon operator will prove very useful and understanding how it works is the key to e–cient and convenient usage of MATLAB. It occurs in several difierent forms. Often we must deal with matrices or vectors that are too large to enter one ele-ment at a time. For example, suppose we want to enter a vector x consisting of points (0; 0:1; 0:2; 0:3; ¢ ¢ ¢ ; 5). We can use the command
 
 >> x = 0:0.1:5;
 
@@ -433,7 +402,6 @@ The row vector has 51 elements.
 
 
 2.5.5	Linear spacing
-
 On the other hand, there is a command to generate linearly spaced vectors: linspace. It is similar to the colon operator (:), but gives direct control over the number of points. For example,
 
 y = linspace(a,b)
@@ -448,16 +416,12 @@ generates a row vector y of n points linearly spaced between and including a and
 
 divides the interval [0; 2…] into 100 equal subintervals, then creating a vector of 101 elements.
 
-
 2.5.6	Colon operator in a matrix
-
 The colon operator can also be used to pick out a certain row or column. For example, the statement A(m:n,k:l specifles rows m to n and column k to l. Subscript expressions refer to portions of a matrix. For example,
  
 >>	A(2,:);
 
-is the second row elements of A.
-
-The colon operator can also be used to extract a sub-matrix from a matrix A.
+is the second row elements of A. The colon operator can also be used to extract a sub-matrix from a matrix A.
 
 >>	A(:,2:3);
 
@@ -468,27 +432,19 @@ A row or a column of a matrix can be deleted by setting it to a null vector, [ ]
 >>	A(:,2)=[];
 
 2.5.7	Creating a sub-matrix
-
 To extract a submatrix B consisting of rows 2 and 3 and columns 1 and 2 of the matrix A, do the following
 
 >> B = A([2 3],[1 2]);
 
 To interchange rows 1 and 2 of A, use the vector of row indices together with the colon operator.
 
->> C = A([2 1 3],:)
-
-C	=		
-	4	5	6
-	1	2	3
-	7	8	0
+>> C = A([2 1 3],:); 
 
 It is important to note that the colon operator (:) stands for all columns or all rows. To create a vector version of matrix A, do the following
  
  >>	A(:);
 
-The submatrix comprising the intersection of rows p to q and columns r to s is denoted by A(p:q,r:s).
-
-As a special case, a colon (:) as the row or column specifler covers all entries in that row or column; thus
+The submatrix comprising the intersection of rows p to q and columns r to s is denoted by A(p:q,r:s). As a special case, a colon (:) as the row or column specifler covers all entries in that row or column; thus
 
 †	A(:,j) is the jth column of A, while
 †	A(i,:) is the ith row, and
@@ -521,7 +477,6 @@ Third row of matrix A is now deleted. To restore the third row, we use a techniq
 Matrix A is now restored to its original form.
 
 2.5.9	Dimension
-
 To determine the dimensions of a matrix or vector, use the command size. For example,
 
 >>	size(A) 
@@ -529,7 +484,6 @@ Or
 >> [m,n]=size(A)
  
 2.5.10	Continuation
-
 If it is not possible to type the entire input on the same line, use consecutive periods, called an ellipsis : : :, to signal continuation, then continue the input on the next line.
 
 B = [4/5	7.23*tan(x)	sqrt(6); ...
@@ -538,9 +492,7 @@ x-7	sqrt(3)	x*sin(x)];
 
 Note that blank spaces around +, ¡, = signs are optional, but they improve readability.
 
-
 2.5.11	Transposing a matrix
-
 The transpose operation is denoted by an apostrophe or a single quote (’). It °ips a matrix about its main diagonal and it turns a row vector into a column vector. Thus,
 
 >>	A’;
@@ -548,7 +500,6 @@ The transpose operation is denoted by an apostrophe or a single quote (’). It 
 By using linear algebra notation, the transpose of m £ n real matrix A is the n £ m matrix that results from interchanging the rows and columns of A. 
 
 2.5.12	Concatenating matrices
-
 Matrices can be made up of sub-matrices. Here is an example. First, let’s recall our previous matrix A.
 
 A   =		
@@ -586,7 +537,6 @@ In addition, matrices can be constructed in a block form. With C deflned by C = 
 >>	D = [C zeros(2); ones(2) eye(2)];
 
 2.5.14	Special matrices
-
 MATLAB provides a number of special matrices (see Table 2.5). These matrices have inter-esting properties that make them useful for constructing examples and for testing algorithms. For more information, see MATLAB documentation.
 
 Special matrices
@@ -596,10 +546,9 @@ magic	Magic square
 pascal	Pascal matrix
 toeplitz	Toeplitz matrix
 vander	Vandermonde matrix
-wilkinson	Wilkinson’s eigenvalue test matrix
+
 --------------------------------------------------------------------------------------------------------------------------
-Chapter 3
-Array operations and Linear equations
+Chapter 3: Array operations and Linear equations
 
 3.1	Array operations
 MATLAB has two difierent types of arithmetic operations: matrix arithmetic operations and array arithmetic operations. We have seen matrix arithmetic operations in the previous lab. Now, we are interested in array operations.
@@ -680,8 +629,7 @@ norm	Matrix and vector norms
 rank	Number of linearly independent rows or columns
 	
 ---------------------------------------------------------------------------------------------------------
-Chapter 4
-Introduction to programming in MATLAB
+Chapter 4: Introduction to programming in MATLAB
 
 4.1	Introduction
 So far in these lab sessions, all the commands were executed in the Command Window. The problem is that the commands entered in the Command Window cannot be saved and executed again for several times. Therefore, a difierent way of executing repeatedly commands with MATLAB is:
@@ -696,13 +644,10 @@ This section covers the following topics:
 †	M-File Functions
 
 4.2	M-File Scripts
-
 A script flle is an external flle that contains a sequence of MATLAB statements. Script flles have a fllename extension .m and are often called M-flles. M-flles can be scripts that simply execute a series of MATLAB statements, or they can be functions that can accept arguments and can produce one or more outputs.
 
 4.2.1	Examples
-
 Here are two simple scripts.
-
 Example 1
 †	Use the MATLAB editor to create a flle: File > New > M-flle.
 †	Enter the following statements in the flle:
@@ -746,7 +691,6 @@ axis([0 2*pi -3 3])
 †	Run the flle by typing example2 in the Command Window.
 
 4.2.2	Script side-efiects
-
 All variables created in a script flle are added to the workspace. This may have undesirable efiects, because:
 †	Variables already existing in the workspace may be overwritten.
 †	The execution of the script can be afiected by the state variables in the workspace.
@@ -754,11 +698,9 @@ All variables created in a script flle are added to the workspace. This may have
 As a result, because scripts have some undesirable side-efiects, it is better to code any complicated applications using rather function M-flle.
 
 4.3	M-File functions
-
 As mentioned earlier, functions are programs (or routines) that accept input arguments and return output arguments. Each M-flle function (or function or M-flle for short) has its own area of workspace, separated from the MATLAB base workspace.
 
 4.3.1	Anatomy of a M-File function
-
 This simple function shows the basic parts of an M-flle.	
 function f = factorial(n)	(1)
 % FACTORIAL(N) returns the factorial of N.   (2)
@@ -826,16 +768,10 @@ The following shows the command prompt when this script flle (saved as example3)
 4.5	Output commands
 
 As discussed before, MATLAB automatically generates a display when commands are exe-cuted. In addition to this automatic display, MATLAB has several commands that can be used to generate displays or outputs.
-Two commands that are frequently used to generate output are: disp and fprintf. The main difierences between these two commands can be summarized as follows (Table 4.4).
+Two commands that are frequently used to generate output are: disp and fprintf where "disp" is simple to use while "fprintf" is slightly more complicated than disp.
 
-Table 4.4: disp and fprintf commands
-disp	. Simple to use.
-. Provide limited control over the appearance of output
-fprintf	. Slightly more complicated than disp.
-. Provide total control over the appearance of output
 -------------------------------------------------------------------------------------------------------------------------
-Chapter 5
-Control °ow and operators
+Chapter 5: Control and operators
 
 5.1	Introduction
 MATLAB is also a programming language. Like other computer programming languages, MATLAB has some decision making structures for control of command execution. These decision making or control °ow structures include for loops, while loops, and if-else-end constructions. Control °ow structures are often used in script M-flles and function M-flles.
@@ -843,7 +779,6 @@ By creating a flle with the extension .m, we can easily write and run programs. 
 MATLAB provides several tools that can be used to control the °ow of a program (script or function). In a simple program as shown in the previous Chapter, the commands are executed one after the other. Here we introduce the °ow control structure that make possible to skip commands or to execute speciflc group of commands.
 
 5.2	Control 
-
 MATLAB has four control structures: the if statement, the for loop, the while loop, and the switch statement.
 
 5.2.1	The ‘‘if...end’’ structure
