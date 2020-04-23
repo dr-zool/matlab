@@ -127,12 +127,12 @@ So here what we get: two different results. Therefore, we want to emphasize the 
 
 MATLAB by default displays only 4 decimals in the result of the calculations, for example -163.6667, as shown in above examples. However, MATLAB does numerical calculations in double precision, which is 15 digits. The command format controls how the results of computations are displayed. Here are some examples of the difierent formats together with the resulting outputs.
 
->>	format short
+>>	format short;
 >>	x = -163.6667
 
 If we want to see all 15 digits, we use the command format long
 
->>	format long
+>>	format long;
 >>	x = -1.636666666666667e+002
 
 To return to the standard format, enter format short, or simply format.
@@ -216,21 +216,9 @@ Chapter 2: Tutorial lessons 2
 2.1	Mathematical functions
 
 MATLAB offers many predeflned mathematical functions for technical computing which contains a large set of mathematical functions. Typing help elfun and help specfun calls up full lists of elementary and special functions respectively. There is a long list of mathematical functions that are built into MATLAB. These functions are called built-ins. Many standard mathematical functions, such as sin(x), cos(x), tan(x), ex, ln(x), are evaluated by the functions sin, cos, tan, exp, and log respectively in
-MATLAB. Table below lists some commonly used functions, where variables x and y can be numbers, vectors, or matrices.
+MATLAB. 
 
-Elementary functions
-cos(x)	Cosine	abs(x)	Absolute value
-sin(x)	Sine	sign(x)	Signum function
-tan(x)	Tangent	max(x)	Maximum value
-acos(x)	Arc cosine	min(x)	Minimum value
-asin(x)	Arc sine	ceil(x)	Round towards +1
-atan(x)	Arc tangent	floor(x)	Round towards ¡1
-exp(x)	Exponential	round(x)	Round to nearest integer
-sqrt(x)	Square root	rem(x)	Remainder after division
-log(x)	Natural logarithm	angle(x)	Phase angle
-log10(x)	Common logarithm	conj(x)	Complex conjugate
-			
-In addition to the elementary functions, MATLAB includes a number of predeflned constant values. A list of the most common values is given below.
+MATLAB includes a number of predeflned constant values. A list of the most common values is given below.
 
 Pre-defined constant values
 pi	: The … number, … = 3:14159
@@ -242,23 +230,24 @@ NaN	: Not a number
 
 We illustrate here some typical examples which related to the elementary functions previously deflned. As a first example, the value of the expression y = e¡a sin(x) + 10py, for a = 5, x = 2, and y = 8 is computed by
 >>	a = 5; x = 2; y = 8;
+
 >>	y = exp(-a)*sin(x)+10*sqrt(y);
 
 The subsequent examples are
 >>	log(142);
+
 >>	log10(142);
 
 Note the difference between the natural logarithm log(x) and the decimal logarithm (base 10) log10(x). To calculate sin(…=4) and e10, we enter the following commands in MATLAB,
 
->>	sin(pi/4) 
-ans = 0.7071
+>>	sin(pi/4);
 
->>	exp(10) 
-ans = 2.2026e+004
+>>	exp(10);
 
 2.2	Basic plotting
 
 2.2.1	Overview
+
 MATLAB has an excellent set of graphic tools. Plotting a given data set or the results of computation is possible with very few commands. You are highly encouraged to plot mathematical functions and results of analysis as often as possible. Trying to understand mathematical equations with graphics is an enjoyable and very e–cient way of learning math-ematics. Being able to plot mathematical functions and data freely is the most important step, and this section is written to assist you to do just that.
 
 2.2.2	Creating simple plots
@@ -267,28 +256,28 @@ The basic MATLAB graphing procedure, for example in 2D, is to take a vector of x
 The MATLAB command to plot a graph is plot(x,y). The vectors x = (1; 2; 3; 4; 5; 6) and y = (3; 1; 2; 4; 5; 1) can be written as
 
 >>	x = [1 2 3 4 5 6];
+
 >>	y = [3 -1 2 4 5 1];
+
 >>	plot(x,y)
 
-Note: The plot functions has difierent forms depending on the input arguments. If y is a vector plot(y)produces a piecewise linear graph of the elements of y versus the index of the elements of y. If we specify two vectors, as mentioned above, plot(x,y) produces a graph of y versus x.
-For example, to plot the function sin (x) on the interval [0; 2…], we flrst create a vector of x values ranging from 0 to 2…, then compute the sine of these values, and flnally plot the result:
+Note: The plot functions has difierent forms depending on the input arguments. If y is a vector plot(y)produces a piecewise linear graph of the elements of y versus the index of the elements of y. If we specify two vectors, as mentioned above, plot(x,y) produces a graph of y versus x. For example, to plot the function sin (x) on the interval [0; 2…], we first create a vector of x values ranging from 0 to 2…, then compute the sine of these values, and flnally plot the result:
  
 >>	x = 0:pi/100:2*pi;
+
 >>	y = sin(x);
+
 >>	plot(x,y)
-
-Notes:
-
-- 0:pi/100:2*pi yields a vector that { starts at 0, { takes steps (or increments) of …=100, { stops when 2… is reached.
-- If you omit the increment, MATLAB automatically increments by 1.
 
 2.2.3	Adding titles, axis labels, and annotations
 
 MATLAB enables you to add axis labels and titles. For example, using the graph from the previous example, add an x- and y-axis labels.
-Now label the axes and add a title. The character \pi creates the symbol …. An example of 2D plot is shown in Figure 2.2.
+Now label the axes and add a title. The character \pi creates the symbol ….
  
 >>	xlabel(’x = 0:2\pi’)
+
 >>	ylabel(’Sine of x’)
+
 >>	title(’Plot of the Sine function’)
 
 The color of a single curve is, by default, blue, but other colors are possible. The desired color is indicated by a third argument. For example, red is selected by plot(x,y,’r’). Note the single quotes, ’ ’, around r.
@@ -298,17 +287,24 @@ The color of a single curve is, by default, blue, but other colors are possible.
 Multiple (x; y) pairs arguments create multiple graphs with a single call to plot. For example, these statements plot three related functions of x: y1 = 2 cos(x), y2 = cos(x), and y3 = 0:5 ⁄ cos(x), in the interval 0 • x • 2….
 
 >>	x = 0:pi/100:2*pi;
->>	y1 = 2*cos(x);
->>	y2 = cos(x);
->>	y3 = 0.5*cos(x);
->>	plot(x,y1,’--’,x,y2,’-’,x,y3,’:’)
->>	xlabel(’0 \leq x \leq 2\pi’)
->>	ylabel(’Cosine functions’)
->>	legend(’2*cos(x)’,’cos(x)’,’0.5*cos(x)’)
->>	title(’Typical example of multiple plots’)
->>	axis([0 2*pi -3 3])
 
-The result of multiple data sets in one graph plot is shown in Figure 2.3.
+>>	y1 = 2*cos(x);
+
+>>	y2 = cos(x);
+
+>>	y3 = 0.5*cos(x);
+
+>>	plot(x,y1,’--’,x,y2,’-’,x,y3,’:’);
+
+>>	xlabel(’0 \leq x \leq 2\pi’);
+
+>>	ylabel(’Cosine functions’);
+
+>>	legend(’2*cos(x)’,’cos(x)’,’0.5*cos(x)’);
+
+>>	title(’Typical example of multiple plots’);
+
+>>	axis([0 2*pi -3 3]);
 
 By default, MATLAB uses line style and color to distinguish the data sets plotted in the graph. However, you can change the appearance of these graphic components or add annotations to the graph to help explain your data for presentation.
 
