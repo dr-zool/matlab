@@ -43,7 +43,7 @@ You will have noticed that if you do not specify an output variable, MATLAB uses
 
 >>	x = 1+2*3;
 
-will result in x being given the value 1 + 2 £ 3 = 7. This variable name can always be used to refer to the results of the previous computations. Therefore, computing 4x will result in
+will result in x being given the value 1+2x3 = 7. This variable name can always be used to refer to the results of the previous computations. Therefore, computing 4x will result in
 
 >>	4*x;
 
@@ -79,7 +79,6 @@ Once a variable has been created, it can be reassigned. In addition, if you do n
 
 >>	t = 5;
 >>	t = t+1 
-t = 6
 
 1.4.3	Error messages
 
@@ -119,6 +118,7 @@ For operators of equal precedence, evaluation is from left to right. Now, consid
 >>	1/(2+3^2)+4/5*6/7;
 
 or, if parentheses are missing,
+
 >>	1/2+3^2+4/5*6/7;
  
 So here what we get: two different results. Therefore, we want to emphasize the importance of precedence rule in order to avoid ambiguity.
@@ -138,7 +138,7 @@ If we want to see all 15 digits, we use the command format long
 To return to the standard format, enter format short, or simply format.
 There are several other formats. For more details, see the MATLAB documentation, or type help format.
 
-Note - Up to now, we have let MATLAB repeat everything that we enter at the prompt (>>). Sometimes this is not quite useful, in particular when the output is pages en length. To prevent MATLAB from echoing what we type, simply enter a semicolon (;) at the end of the command. For example,
+Note - Up to now, we have let MATLAB repeat everything that we enter at the prompt (>>). Sometimes this is not quite useful, in particular when the output is pages length. To prevent MATLAB from echoing what we type, simply enter a semicolon (;) at the end of the command. For example,
 
 >> x = -163.6667;
 
