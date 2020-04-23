@@ -1,7 +1,7 @@
 # matlab
-Matlab for Beginner
-
-Chapter 1
+Matlab for Beginner by Dr Zool
+------------------------------------------------------------------------------------------------------------------------------
+Chapter 1: 
 Tutorial lessons 1
 
 1.1	Introduction
