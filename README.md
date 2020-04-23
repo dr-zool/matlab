@@ -198,6 +198,7 @@ Note - At this particular time of our study, it is important to emphasize one ma
 Chapter 2: Tutorial lessons 2
 
 2.1	Mathematical functions
+
 MATLAB offers many predeflned mathematical functions for technical computing which contains a large set of mathematical functions. Typing help elfun and help specfun calls up full lists of elementary and special functions respectively. There is a long list of mathematical functions that are built into MATLAB. These functions are called built-ins. Many standard mathematical functions, such as sin(x), cos(x), tan(x), ex, ln(x), are evaluated by the functions sin, cos, tan, exp, and log respectively in
 MATLAB. Table below lists some commonly used functions, where variables x and y can be numbers, vectors, or matrices.
 
@@ -222,6 +223,7 @@ Inf     : Infinity
 NaN	: Not a number
 
 2.1.1	Examples
+
 We illustrate here some typical examples which related to the elementary functions previously deflned. As a first example, the value of the expression y = e¡a sin(x) + 10py, for a = 5, x = 2, and y = 8 is computed by
 >>	a = 5; x = 2; y = 8;
 >>	y = exp(-a)*sin(x)+10*sqrt(y);
@@ -239,12 +241,14 @@ ans = 0.7071
 ans = 2.2026e+004
 
 2.2	Basic plotting
+
 2.2.1	Overview
 MATLAB has an excellent set of graphic tools. Plotting a given data set or the results of computation is possible with very few commands. You are highly encouraged to plot mathematical functions and results of analysis as often as possible. Trying to understand mathematical equations with graphics is an enjoyable and very e–cient way of learning math-ematics. Being able to plot mathematical functions and data freely is the most important step, and this section is written to assist you to do just that.
 
 2.2.2	Creating simple plots
-The basic MATLAB graphing procedure, for example in 2D, is to take a vector of x-coordinates, x = (x1; : : : ; xN ), and a vector of y-coordinates, y = (y 1; : : : ; yN ), locate the points (xi; yi), with i = 1; 2; : : : ; n and then join them by straight lines. You need to prepare x and y in an identical array form; namely, x and y are both row arrays or column arrays of the same length.
-The MATLAB command to plot a graph is plot(x,y). The vectors x = (1; 2; 3; 4; 5; 6) and y = (3; ¡1; 2; 4; 5; 1) produce the picture shown in Figure 2.1.
+
+The basic MATLAB graphing procedure, for example in 2D, is to take a vector of x-coordinates, x = (x1;... ; xN ), and a vector of y-coordinates, y = (y 1; ... ; yN ), locate the points (xi; yi), with i = 1; 2; ... ; n and then join them by straight lines. You need to prepare x and y in an identical array form; namely, x and y are both row arrays or column arrays of the same length.
+The MATLAB command to plot a graph is plot(x,y). The vectors x = (1; 2; 3; 4; 5; 6) and y = (3; 1; 2; 4; 5; 1) can be written as
 
 >>	x = [1 2 3 4 5 6];
 >>	y = [3 -1 2 4 5 1];
@@ -259,10 +263,11 @@ For example, to plot the function sin (x) on the interval [0; 2…], we flrst cr
 
 Notes:
 
-†	0:pi/100:2*pi yields a vector that { starts at 0, { takes steps (or increments) of …=100, { stops when 2… is reached.
-†	If you omit the increment, MATLAB automatically increments by 1.
+- 0:pi/100:2*pi yields a vector that { starts at 0, { takes steps (or increments) of …=100, { stops when 2… is reached.
+- If you omit the increment, MATLAB automatically increments by 1.
 
 2.2.3	Adding titles, axis labels, and annotations
+
 MATLAB enables you to add axis labels and titles. For example, using the graph from the previous example, add an x- and y-axis labels.
 Now label the axes and add a title. The character \pi creates the symbol …. An example of 2D plot is shown in Figure 2.2.
  
@@ -273,6 +278,7 @@ Now label the axes and add a title. The character \pi creates the symbol …. An
 The color of a single curve is, by default, blue, but other colors are possible. The desired color is indicated by a third argument. For example, red is selected by plot(x,y,’r’). Note the single quotes, ’ ’, around r.
 
 2.2.4	Multiple data sets in one plot
+
 Multiple (x; y) pairs arguments create multiple graphs with a single call to plot. For example, these statements plot three related functions of x: y1 = 2 cos(x), y2 = cos(x), and y3 = 0:5 ⁄ cos(x), in the interval 0 • x • 2….
 
 >>	x = 0:pi/100:2*pi;
@@ -291,10 +297,10 @@ The result of multiple data sets in one graph plot is shown in Figure 2.3.
 By default, MATLAB uses line style and color to distinguish the data sets plotted in the graph. However, you can change the appearance of these graphic components or add annotations to the graph to help explain your data for presentation.
 
 2.2.5	Specifying line styles and colors
-It is possible to specify line styles, colors, and markers (e.g., circles, plus signs, . . . ) using the plot command:  plot(x,y,’style_color_marker’)
-where style_color_marker is a triplet of values from Table 2.3.
 
-To find additional information, type help plot or doc plot.
+It is possible to specify line styles, colors, and markers (e.g., circles, plus signs, . . . ) using the plot command:  plot(x,y,’style_color_marker’)
+
+where style_color_marker is a triplet of values from Table below.
 
 Attributes for plot
 Symbol	Color	Symbol	Line Style	Symbol	Marker
@@ -307,12 +313,15 @@ m	Magenta			s	Square
 y	Yellow			d	Diamond
 					
 2.4	Introduction
+
 Matrices are the basic elements of the MATLAB environment. A matrix is a two-dimensional array consisting of m rows and n columns. Special cases are column vectors (n = 1) and row vectors (m = 1). In this section we will illustrate how to apply difierent operations on matrices. The following topics are discussed: vectors and matrices in MATLAB, the inverse of a matrix, determinants, and matrix manipulation. MATLAB supports two types of operations, known as matrix operations and array operations. Matrix operations will be discussed first.
 
 2.5	Matrix generation
+
 Matrices are fundamental to MATLAB. Therefore, we need to become familiar with matrix generation and manipulation. Matrices can be generated in several ways.
 
 2.5.1	Entering a vector
+
 A vector is a special case of a matrix. The purpose of this section is to show how to create vectors and matrices in MATLAB. As discussed earlier, an array of dimension 1 £n is called a row vector, whereas an array of dimension m £ 1 is called a column vector. The elements of vectors in MATLAB are enclosed by square brackets and are separated by spaces or by commas. For example, to enter a row vector, v, type
 
 >>	v = [1 4 7 10 13];
@@ -343,6 +352,7 @@ produces a column vector, whereas writing
 produces a row vector.
 
 2.5.2	Entering a matrix
+
 A matrix is an array of numbers. To type a matrix into MATLAB you must
 
 †	begin with a square bracket, [
@@ -371,6 +381,7 @@ A(2,1) is an element located in the second row and flrst column. Its value is 4.
 
 
 2.5.3	Matrix indexing
+
 We select elements in a matrix just as we did for vectors, but now we need two indices. The element of row i and column j of the matrix A is denoted by A(i,j). Thus, A(i,j) in MATLAB refers to the element Aij of matrix A. The flrst index is the row number and the second index is the column number. For example, A(1,3) is an element of flrst row and third column. Here, A(1,3)=3.
 
 Correcting any entry is easy through indexing. Here we substitute A(3,3)=9 by A(3,3)=0. The result is
@@ -380,14 +391,15 @@ Correcting any entry is easy through indexing. Here we substitute A(3,3)=9 by A(
 Single elements of a matrix are accessed as A(i,j), where i ‚ 1 and j ‚ 1. Zero or negative subscripts are not supported in MATLAB.
 
 2.5.4	Colon operator
+
 The colon operator will prove very useful and understanding how it works is the key to e–cient and convenient usage of MATLAB. It occurs in several difierent forms. Often we must deal with matrices or vectors that are too large to enter one ele-ment at a time. For example, suppose we want to enter a vector x consisting of points (0; 0:1; 0:2; 0:3; ¢ ¢ ¢ ; 5). We can use the command
 
 >> x = 0:0.1:5;
 
 The row vector has 51 elements.
 
-
 2.5.5	Linear spacing
+
 On the other hand, there is a command to generate linearly spaced vectors: linspace. It is similar to the colon operator (:), but gives direct control over the number of points. For example,
 
 y = linspace(a,b)
@@ -403,6 +415,7 @@ generates a row vector y of n points linearly spaced between and including a and
 divides the interval [0; 2…] into 100 equal subintervals, then creating a vector of 101 elements.
 
 2.5.6	Colon operator in a matrix
+
 The colon operator can also be used to pick out a certain row or column. For example, the statement A(m:n,k:l specifles rows m to n and column k to l. Subscript expressions refer to portions of a matrix. For example,
  
 >>	A(2,:);
@@ -418,6 +431,7 @@ A row or a column of a matrix can be deleted by setting it to a null vector, [ ]
 >>	A(:,2)=[];
 
 2.5.7	Creating a sub-matrix
+
 To extract a submatrix B consisting of rows 2 and 3 and columns 1 and 2 of the matrix A, do the following
 
 >> B = A([2 3],[1 2]);
@@ -432,9 +446,9 @@ It is important to note that the colon operator (:) stands for all columns or al
 
 The submatrix comprising the intersection of rows p to q and columns r to s is denoted by A(p:q,r:s). As a special case, a colon (:) as the row or column specifler covers all entries in that row or column; thus
 
-†	A(:,j) is the jth column of A, while
-†	A(i,:) is the ith row, and
-†	A(end,:) picks out the last row of A.
+- A(:,j) is the jth column of A, while
+- A(i,:) is the ith row, and
+- A(end,:) picks out the last row of A.
 
 The keyword end, used in A(end,:), denotes the last index in the specifled dimension. Here are some examples.
 
@@ -444,11 +458,9 @@ A  =
 4	5	6
 7	8	9]
 
-
 >>	A(2:3,2:3);
 >>	A(end:-1:1,end);
 >>	A([1 3],[2 3]);
-
 
 2.5.8	Deleting row or column
 
@@ -463,6 +475,7 @@ Third row of matrix A is now deleted. To restore the third row, we use a techniq
 Matrix A is now restored to its original form.
 
 2.5.9	Dimension
+
 To determine the dimensions of a matrix or vector, use the command size. For example,
 
 >>	size(A) 
@@ -470,6 +483,7 @@ Or
 >> [m,n]=size(A)
  
 2.5.10	Continuation
+
 If it is not possible to type the entire input on the same line, use consecutive periods, called an ellipsis : : :, to signal continuation, then continue the input on the next line.
 
 B = [4/5	7.23*tan(x)	sqrt(6); ...
@@ -479,6 +493,7 @@ x-7	sqrt(3)	x*sin(x)];
 Note that blank spaces around +, ¡, = signs are optional, but they improve readability.
 
 2.5.11	Transposing a matrix
+
 The transpose operation is denoted by an apostrophe or a single quote (’). It °ips a matrix about its main diagonal and it turns a row vector into a column vector. Thus,
 
 >>	A’;
@@ -486,6 +501,7 @@ The transpose operation is denoted by an apostrophe or a single quote (’). It 
 By using linear algebra notation, the transpose of m £ n real matrix A is the n £ m matrix that results from interchanging the rows and columns of A. 
 
 2.5.12	Concatenating matrices
+
 Matrices can be made up of sub-matrices. Here is an example. First, let’s recall our previous matrix A.
 
 A   =		
@@ -498,6 +514,7 @@ The new matrix B will be,
 >>	B=[A10*A;-A[100;010;001]] ;
 
 2.5.13	Matrix generators
+
 MATLAB provides functions that generates elementary matrices. The matrix of zeros, the matrix of ones, and the identity matrix are returned by the functions zeros, ones, and eye, respectively.
 
 Elementary matrices
@@ -516,13 +533,14 @@ Equivalently, we can deflne b as >> b=[1;1;1]
 >> eye(3);	
 >> c=zeros(2,3)
 
-In addition, it is important to remember that the three elementary operations of ad-dition (+), subtraction (¡), and multiplication (⁄) apply also to matrices whenever the dimensions are compatible.
-Two other important matrix generation functions are rand and randn, which generate matrices of (pseudo-)random numbers using the same syntax as eye.
+In addition, it is important to remember that the three elementary operations of ad-dition (+), subtraction (¡), and multiplication (⁄) apply also to matrices whenever the dimensions are compatible. Two other important matrix generation functions are rand and randn, which generate matrices of (pseudo-)random numbers using the same syntax as eye.
+
 In addition, matrices can be constructed in a block form. With C deflned by C = [1 2; 3 4], we may create a matrix D as follows
 
 >>	D = [C zeros(2); ones(2) eye(2)];
 
 2.5.14	Special matrices
+
 MATLAB provides a number of special matrices (see Table 2.5). These matrices have inter-esting properties that make them useful for constructing examples and for testing algorithms. For more information, see MATLAB documentation.
 
 Special matrices
@@ -537,12 +555,15 @@ vander	Vandermonde matrix
 Chapter 3: Array operations and Linear equations
 
 3.1	Array operations
+
 MATLAB has two difierent types of arithmetic operations: matrix arithmetic operations and array arithmetic operations. We have seen matrix arithmetic operations in the previous lab. Now, we are interested in array operations.
 
 3.1.1	Matrix arithmetic operations
+
 As we mentioned earlier, MATLAB allows arithmetic operations: +, ¡, ⁄, and ^ to be carried out on matrices. 
 
 3.1.2	Array arithmetic operations
+
 On the other hand, array arithmetic operations or array operations for short, are done element-by-element. The period character, ., distinguishes the array operations from the matrix operations. However, since the matrix and array operations are the same for addition
 (+)	and subtraction (¡), the character pairs (:+) and (:¡) are not used. The list of array operators is shown below in Table 3.2. If A and B are two matrices of the same size with elements A = [aij] and B = [bij], then the command
  
@@ -618,21 +639,24 @@ rank	Number of linearly independent rows or columns
 Chapter 4: Introduction to programming in MATLAB
 
 4.1	Introduction
+
 So far in these lab sessions, all the commands were executed in the Command Window. The problem is that the commands entered in the Command Window cannot be saved and executed again for several times. Therefore, a difierent way of executing repeatedly commands with MATLAB is:
 
-1.	to create a flle with a list of commands,
-2.	save the flle, and
-3.	run the flle.
+1. create a flle with a list of commands,
+2. save the flle, and
+3. run the flle.
 
 If needed, corrections or changes can be made to the commands in the flle. The flles that are used for this purpose are called script flles or scripts for short.
 This section covers the following topics:
-†	M-File Scripts
-†	M-File Functions
+- M-File Scripts
+- M-File Functions
 
 4.2	M-File Scripts
+
 A script flle is an external flle that contains a sequence of MATLAB statements. Script flles have a fllename extension .m and are often called M-flles. M-flles can be scripts that simply execute a series of MATLAB statements, or they can be functions that can accept arguments and can produce one or more outputs.
 
 4.2.1	Examples
+
 Here are two simple scripts.
 Example 1
 †	Use the MATLAB editor to create a flle: File > New > M-flle.
@@ -642,13 +666,13 @@ A=[123;334;233];
 b = [1; 1; 2];
 x = A\b
 
-
-†	Save the flle, for example, example1.m.
-†	Run the flle, in the command line, by typing:
+- Save the flle, for example, example1.m.
+- Run the flle, in the command line, by typing:
 
 >>	example1;
 
 When execution completes, the variables (A, b, and x) remain in the workspace. To see a listing of them, enter whos at the command prompt.
+
 Note: The MATLAB editor is both a text editor specialized for creating M-flles and a graphical MATLAB debugger. The MATLAB editor has numerous menus for tasks such as saving, viewing, and debugging. Because it performs some simple checks and also uses color to difierentiate between various elements of codes, this text editor is recommended as the tool of choice for writing and editing M-flles.
 
 There is another way to open the editor:
@@ -661,7 +685,7 @@ Example 2
 
 Plot the following cosine functions, y1 = 2 cos(x), y2 = cos(x), and y3 = 0:5 ⁄ cos(x), in the interval 0 • x • 2…. This example has been presented in previous Chapter. Here we put the commands in a flle.
 
-†	Create a flle, say example2.m, which contains the following commands:
+- Create a flle, say example2.m, which contains the following commands:
 x = 0:pi/100:2*pi;
 y1 = 2*cos(x);
 y2 = cos(x);
@@ -674,47 +698,37 @@ legend(’2*cos(x)’,’cos(x)’,’0.5*cos(x)’)
 title(’Typical example of multiple plots’)
 axis([0 2*pi -3 3])
 
-†	Run the flle by typing example2 in the Command Window.
+- Run the flle by typing example2 in the Command Window.
 
 4.2.2	Script side-efiects
+
 All variables created in a script flle are added to the workspace. This may have undesirable efiects, because:
-†	Variables already existing in the workspace may be overwritten.
-†	The execution of the script can be afiected by the state variables in the workspace.
+- Variables already existing in the workspace may be overwritten.
+- The execution of the script can be afiected by the state variables in the workspace.
 
 As a result, because scripts have some undesirable side-efiects, it is better to code any complicated applications using rather function M-flle.
 
 4.3	M-File functions
+
 As mentioned earlier, functions are programs (or routines) that accept input arguments and return output arguments. Each M-flle function (or function or M-flle for short) has its own area of workspace, separated from the MATLAB base workspace.
 
 4.3.1	Anatomy of a M-File function
+
 This simple function shows the basic parts of an M-flle.	
 function f = factorial(n)	(1)
 % FACTORIAL(N) returns the factorial of N.   (2)
 % Compute a factorial value.	(3)
 f = prod(1:n);	(4)
 
-The first line of a function M-flle starts with the keyword function. It gives the function name and order of arguments. In the case of function factorial, there are up to one output argument and one input argument. Table 4.1 summarizes the M-flle function.
+The first line of a function M-flle starts with the keyword function. It gives the function name and order of arguments. In the case of function factorial, there are up to one output argument and one input argument. 
 As an example, for n = 5, the result is,
 
 >>	f = factorial(5);
 
-Anatomy of a M-File function
-
-Part no.	M-flle element	Description
-(1)	Function	Deflne the function name, and the
-	deflnition	number and order of input and
-	line	output arguments
-(2)	H1 line	A one line summary description
-		of the program, displayed when you
-		request Help
-(3)	Help text	A more detailed description of
-		the program
-(4)	Function body	Program code that performs
-		the actual computations
-		
 In addition, it is important to note that function name must begin with a letter, and must be no longer than than the maximum of 63 characters. Furthermore, the name of the text flle that you save will consist of the function name with the extension .m. Thus, the above example flle would be factorial.m.
 
 4.3.2	Input and output arguments
+
 As mentioned above, the input arguments are listed inside parentheses following the function name. The output arguments are listed inside the brackets on the left side. They are used to transfer the output from the function flle. The general form looks like this
 
 function [outputs] = function_name(inputs)
@@ -730,9 +744,9 @@ function [h,d]=motion(v,angle)	Two inputs and two outputs
 4.4	Input to a script flle
 When a script flle is executed, the variables that are used in the calculations within the flle must have assigned values. The assignment of a value to a variable can be done in three ways.
 
-1.	The variable is deflned in the script flle.
-2.	The variable is deflned in the command prompt.
-3.	The variable is entered when the script is executed.
+1. The variable is deflned in the script flle.
+2. The variable is deflned in the command prompt.
+3. The variable is entered when the script is executed.
 
 We have already seen the two flrst cases. Here, we will focus our attention on the third one. In this case, the variable is deflned in the script flle. When the flle is executed, the user is prompted to assign a value to the variable in the command prompt. This is done by using the input command. Here is an example.
 
@@ -760,14 +774,17 @@ Two commands that are frequently used to generate output are: disp and fprintf w
 Chapter 5: Control and operators
 
 5.1	Introduction
+
 MATLAB is also a programming language. Like other computer programming languages, MATLAB has some decision making structures for control of command execution. These decision making or control °ow structures include for loops, while loops, and if-else-end constructions. Control °ow structures are often used in script M-flles and function M-flles.
 By creating a flle with the extension .m, we can easily write and run programs. We do not need to compile the program since MATLAB is an interpretative (not compiled) language. MATLAB has thousand of functions, and you can add your own using m-flles.
 MATLAB provides several tools that can be used to control the °ow of a program (script or function). In a simple program as shown in the previous Chapter, the commands are executed one after the other. Here we introduce the °ow control structure that make possible to skip commands or to execute speciflc group of commands.
 
 5.2	Control 
+
 MATLAB has four control structures: the if statement, the for loop, the while loop, and the switch statement.
 
 5.2.1	The ‘‘if...end’’ structure
+
 MATLAB supports the variants of \if" construct.
 
 †	if ...  end
@@ -799,14 +816,14 @@ disp(’Roots are real’) end
 
 It should be noted that:
 
-†	elseif has no space between else and if (one word)
-†	no semicolon (;) is needed at the end of lines containing if, else, end
-†	indentation of if block is not required, but facilitate the reading.
-†	the end statement is required
+- elseif has no space between else and if (one word)
+- no semicolon (;) is needed at the end of lines containing if, else, end
+- indentation of if block is not required, but facilitate the reading.
+- the end statement is required
 
 5.2.2	Relational and logical operators
 
-A relational operator compares two numbers by determining whether a comparison is true or false. Relational operators are shown in Table 5.1.
+A relational operator compares two numbers by determining whether a comparison is true or false. 
 
 Relational and logical operators
 Operator	Description
@@ -854,18 +871,20 @@ end
 It is important to note that if the condition inside the looping is not well deflned, the looping will continue indeflnitely. If this happens, we can stop the execution by pressing Ctrl-C.
 
 5.2.5	Other structures
-†	The break statement. A while loop can be terminated with the break statement, which passes control to the flrst statement after the corresponding end. The break statement can also be used to exit a for loop.
-†	The continue statement can also be used to exit a for loop to pass immediately to the next iteration of the loop, skipping the remaining statements in the loop.
-†	Other control statements include return, continue, switch, etc. For more detail about these commands, consul MATLAB documentation.
+
+- The break statement. A while loop can be terminated with the break statement, which passes control to the flrst statement after the corresponding end. The break statement can also be used to exit a for loop.
+- The continue statement can also be used to exit a for loop to pass immediately to the next iteration of the loop, skipping the remaining statements in the loop.
+- Other control statements include return, continue, switch, etc. For more detail about these commands, consul MATLAB documentation.
 
 5.2.6	Operator precedence
+
 We can build expressions that use any combination of arithmetic, relational, and logical operators. Precedence rules determine the order in which MATLAB evaluates an expression. We have already seen this in the \Tutorial Lessons".
 Here we add other operators in the list. The precedence rules for MATLAB are shown in this list (Table 5.2), ordered from highest (1) to lowest (9) precedence level. Operators are evaluated from left to right.
 
 Precedence Operator
-1	Parentheses ()
-2	Transpose (: 0), power (.^), matrix power (^)
-3	Unary plus (+), unary minus (¡), logical negation (»)
+1 Parentheses ()
+2 Transpose (: 0), power (.^), matrix power (^)
+3 Unary plus (+), unary minus (¡), logical negation (»)
 4 Multiplication (: ⁄), right division (: =), left division (:n), matrix multiplication (⁄), matrix right division (=), matrix left division (n)
 5 Addition (+), subtraction (¡)
 6 Colon operator (:)
@@ -873,78 +892,87 @@ Precedence Operator
 8 Element-wise AND, (&)
 9 Element-wise OR, (j)
 
-5.3	Saving output to a flle
+5.3	Saving output to a file
+
 In addition to displaying output on the screen, the command fprintf can be used for writing the output to a flle. The saved data can subsequently be used by MATLAB or other softwares.
 
 To save the results of some computation to a flle in a text format requires the following steps:
-1.	Open a flle using fopen
-2.	Write the output using fprintf
-3.	Close the flle using fclose
+1. Open a flle using fopen
+2. Write the output using fprintf
+3. Close the flle using fclose
 
 Here is an example (script) of its use.
+
 %	write some variable length strings to a file op = fopen(’weekdays.txt’,’wt’); fprintf(op,’Sunday\nMonday\nTuesday\nWednesday\n’); fprintf(op,’Thursday\nFriday\nSaturday\n’); fclose(op);
 
-This flle (weekdays.txt) can be opened with any program that can read .txt flle.
+This file (weekdays.txt) can be opened with any program that can read .txt flle.
 
 ---------------------------------------------------------------------------------------------------------------------
-Chapter 6
-Debugging M-flles
+Chapter 6: Debugging M-flles
 
 6.1	Introduction
+
 This section introduces general techniques for flnding errors in M-flles. Debugging is the process by which you isolate and flx errors in your program or code.
 Debugging helps to correct two kind of errors:
-†	Syntax errors - For example omitting a parenthesis or misspelling a function name.
-†	Run-time errors - Run-time errors are usually apparent and di–cult to track down. They produce unexpected results.
+- Syntax errors - For example omitting a parenthesis or misspelling a function name.
+- Run-time errors - Run-time errors are usually apparent and di–cult to track down. They produce unexpected results.
 
 6.2	Debugging process
 
 We can debug the M-flles using the Editor/Debugger as well as using debugging functions from the Command Window. The debugging process consists of
-†	Preparing for debugging
-†	Setting breakpoints
-†	Running an M-flle with breakpoints
-†	Stepping through an M-flle
-†	Examining values
-†	Correcting problems
-†	Ending debugging
+- Preparing for debugging
+- Setting breakpoints
+- Running an M-flle with breakpoints
+- Stepping through an M-flle
+- Examining values
+- Correcting problems
+- Ending debugging
 
 6.2.1	Preparing for debugging
 
 Here we use the Editor/Debugger for debugging. Do the following to prepare for debugging:
-†	Open the flle
-†	Save changes
-†	Be sure the flle you run and any flles it calls are in the directories that are on the search path.
+- Open the flle
+- Save changes
+- Be sure the flle you run and any flles it calls are in the directories that are on the search path.
 
 6.2.2	Setting breakpoints
 
 Set breakpoints to pause execution of the function, so we can examine where the problem might be. There are three basic types of breakpoints:
 
-†	A standard breakpoint, which stops at a specifled line.
-†	A conditional breakpoint, which stops at a specifled line and under specifled conditions.
-†	An error breakpoint that stops when it produces the specifled type of warning, error, NaN, or inflnite value.
+- A standard breakpoint, which stops at a specifled line.
+- A conditional breakpoint, which stops at a specifled line and under specifled conditions.
+- An error breakpoint that stops when it produces the specifled type of warning, error, NaN, or inflnite value.
 
 6.2.3	Running with breakpoints
+
 After setting breakpoints, run the M-flle from the Editor/Debugger or from the Command Window. Running the M-flle results in the following:
-†	The prompt in the Command Window changes to K>>
+- The prompt in the Command Window changes to K>>
+
 indicating that MATLAB is in debug mode.
 
-†	The program pauses at the flrst breakpoint. This means that line will be executed when you continue. The pause is indicated by the green arrow.
-†	In breakpoint, we can examine variable, step through programs, and run other calling functions.
+- The program pauses at the flrst breakpoint. This means that line will be executed when you continue. The pause is indicated by the green arrow.
+- In breakpoint, we can examine variable, step through programs, and run other calling functions.
 
 6.2.4	Examining values
+
 While the program is paused, we can view the value of any variable currently in the workspace. Examine values when we want to see whether a line of code has produced the expected result or not. If the result is as expected, step to the next line, and continue running. If the result is not as expected, then that line, or the previous line, contains an error. When we run a program, the current workspace is shown in the Stack fleld. Use who or whos to list the variables in the current workspace.
+
 First, we position the cursor to the left of a variable on that line. Its current value appears. This is called a datatip, which is like a tooltip for data. If you have trouble getting the datatip to appear, click in the line and then move the cursor next to the variable.
 
 6.2.5	Correcting and ending debugging
+
 While debugging, we can change the value of a variable to see if the new value produces expected results. While the program is paused, assign a new value to the variable in the Com-mand Window, Workspace browser, or Array Editor. Then continue running and stepping through the program.
 
 6.2.6	Ending debugging
+
 After identifying a problem, end the debugging session. It is best to quit debug mode before editing an M-flle. Otherwise, you can get unexpected results when you run the flle. To end debugging, select Exit Debug Mode from the Debug menu.
 
 6.2.7	Correcting an M-flle
+
 To correct errors in an M-flle,
-†	Quit debugging
-†	Do not make changes to an M-flle while MATLAB is in debug mode
-†	Make changes to the M-flle
-†	Save the M-flle
-†	Clear breakpoints
-†	Run the M-flle again to be sure it produces the expected results. For details on debugging process, see MATLAB documentation.
+- Quit debugging
+- Do not make changes to an M-flle while MATLAB is in debug mode
+- Make changes to the M-flle
+- Save the M-flle
+- Clear breakpoints
+- Run the M-flle again to be sure it produces the expected results. For details on debugging process, see MATLAB documentation.
