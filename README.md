@@ -40,18 +40,15 @@ Note: To simplify the notation, we will use this prompt, >>, as a standard promp
 1.3.2	Using MATLAB as a calculator
 As an example of a simple interactive calculation, just type the expression you want to evaluate. Let’s start at the very beginning. For example, let’s suppose you want to calculate the expression, 1 + 2 £ 3. You type it at the prompt command (>>) as follows,
 
->>	1+2*3 ans =
-7
+>>	1+2*3 
 
 You will have noticed that if you do not specify an output variable, MATLAB uses a default variable ans, short for answer, to store the results of the current calculation. Note that the variable ans is created (or overwritten, if it is already existed). To avoid this, you may assign a value to a variable or output argument name. For example,
 
->>	x = 1+2*3 x =
-7
+>>	x = 1+2*3;
 
 will result in x being given the value 1 + 2 £ 3 = 7. This variable name can always be used to refer to the results of the previous computations. Therefore, computing 4x will result in
 
->>	4*x ans  =
-28.0000
+>>	4*x;
 
 Before we conclude this minimum session, Table 1.1 gives the partial list of arithmetic operators.
  
@@ -92,10 +89,7 @@ t = 6
 If we enter an expression incorrectly, MATLAB will return an error message. For example, in the following, we left out the multiplication sign, *, in the following expression
 
 >>	x = 10;
->>	5x
-???	5x
-|
-Error: Unexpected MATLAB expression.
+>>	5x;
 
 1.4.4	Making corrections
 To make corrections, we can, of course retype the expressions. But if the expression is lengthy, we make more mistakes by typing a second time. A previously typed command can be recalled with the up-arrow key ". When the command is displayed at the command prompt, it can be modifled if needed and executed.
@@ -103,13 +97,11 @@ To make corrections, we can, of course retype the expressions. But if the expres
 1.4.5	Controlling the hierarchy of operations or precedence
 Let’s consider the previous arithmetic operation, but now we will include parentheses. For example, 1 + 2 £ 3 will become (1 + 2) £ 3
 
->>	(1+2)*3 ans =
-9
+>>	(1+2)*3;
 
 and, from previous example
 
->>	1+2*3
-ans   = 7
+>>	1+2*3;
 
 By adding parentheses, these two expressions give difierent results: 9 and 7.
 
@@ -124,12 +116,10 @@ Fourth	All additions and subtractions are evaluated, starting from left to right
 	
 For operators of equal precedence, evaluation is from left to right. Now, consider another example in MATLAB:
 
->>	1/(2+3^2)+4/5*6/7 
-ans = 0.7766
+>>	1/(2+3^2)+4/5*6/7;
 
 or, if parentheses are missing,
->>	1/2+3^2+4/5*6/7 
-ans = 10.1857
+>>	1/2+3^2+4/5*6/7;
  
 So here what we get: two different results. Therefore, we want to emphasize the importance of precedence rule in order to avoid ambiguity.
 
@@ -156,7 +146,6 @@ and then ask about the value of x by typing,
 >>	x 
 x = -163.6667
 
-
 1.4.7	Managing the workspace
 The contents of the workspace persist between the executions of separate commands. Therefore, it is possible for the results of one problem to have an efiect on the next one. To avoid this possibility, it is a good idea to issue a clear command at the start of each new inde-pendent calculation.
 
@@ -181,7 +170,6 @@ or give a name to a created flle,
 where FileName could be any arbitrary name you choose.
 
 The function diary is useful if you want to save a complete MATLAB session. They save all input and output as they appear in the MATLAB window. When you want to stop the recording, enter diary off. If you want to start recording again, enter diary on. The flle that is created is a simple text flle. It can be opened by an editor or a word processing program and edited to remove extraneous material, or to add your comments. You can use the function type to view the diary flle or you can edit in a text editor or print. This command is useful, for example in the process of preparing a homework or lab submission.
-
 
 1.4.9	Entering multiple statements per line
 
@@ -216,7 +204,7 @@ Note - At this particular time of our study, it is important to emphasize one ma
 
 >>	doc plot
  
-†	Use lookfor to flnd functions by keywords. The general form is
+†	Use lookfor to find functions by keywords. The general form is
 
 >>	lookfor FunctionName
 
@@ -228,7 +216,7 @@ Tutorial lessons 2
 
 2.1	Mathematical functions
 
-MATLAB ofiers many predeflned mathematical functions for technical computing which contains a large set of mathematical functions.
+MATLAB offers many predeflned mathematical functions for technical computing which contains a large set of mathematical functions.
 
 Typing help elfun and help specfun calls up full lists of elementary and special functions respectively. There is a long list of mathematical functions that are built into MATLAB. These functions are called built-ins. Many standard mathematical functions, such as sin(x), cos(x), tan(x), ex, ln(x), are evaluated by the functions sin, cos, tan, exp, and log respectively in
 MATLAB.
@@ -253,7 +241,7 @@ In addition to the elementary functions, MATLAB includes a number of predeflned 
 Pre-defined constant values
 pi	: The … number, … = 3:14159
 i,j	: The imaginary unit i,	sqrt(-1)
-Inf : Infinity
+Inf     : Infinity
 NaN	: Not a number
 
 2.1.1	Examples
@@ -264,20 +252,11 @@ As a flrst example, the value of the expression y = e¡a sin(x) + 10py, for a = 
 
 
 >>	a = 5; x = 2; y = 8;
-
->>	y = exp(-a)*sin(x)+10*sqrt(y) y =
-
-28.2904
+>>	y = exp(-a)*sin(x)+10*sqrt(y);
 
 The subsequent examples are
-
->>	log(142) ans =
-
-4.9558
-
->>	log10(142) ans =
-
-2.1523
+>>	log(142);
+>>	log10(142);
 
 Note the difference between the natural logarithm log(x) and the decimal logarithm (base 10) log10(x). To calculate sin(…=4) and e10, we enter the following commands in MATLAB,
 
@@ -289,7 +268,7 @@ ans = 2.2026e+004
 
 2.2	Basic plotting
 
-2.2.1	overview
+2.2.1	Overview
 MATLAB has an excellent set of graphic tools. Plotting a given data set or the results of computation is possible with very few commands. You are highly encouraged to plot mathematical functions and results of analysis as often as possible. Trying to understand mathematical equations with graphics is an enjoyable and very e–cient way of learning math-ematics. Being able to plot mathematical functions and data freely is the most important step, and this section is written to assist you to do just that.
 
 2.2.2	Creating simple plots
