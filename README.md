@@ -8,14 +8,14 @@ Tutorial lessons 1
 The tutorials are independent of the rest of the document. The primarily objective is to help you learn quickly the flrst steps. The emphasis here is \learning by doing". Therefore, the best way to learn is by trying it yourself. Working through the examples will give you a feel for the way that MATLAB operates. In this introduction we will describe how MATLAB handles simple numerical expressions and mathematical formulas. The name MATLAB stands for MATrix LABoratory. MATLAB was written originally to provide easy access to matrix software developed by the LINPACK (linear system package) and EISPACK (Eigen system package) projects.
 
 1.2	A minimum MATLAB session
-The goal of this minimum session (also called starting and exiting sessions) is to learn the flrst steps:
+The goal of this minimum session (also called starting and exiting sessions) is to learn the first steps:
 - How to log on
 - Invoke MATLAB
 - Do a few simple calculations
 - How to quit MATLAB
 
 1.3.1	Starting MATLAB
-After logging into your account, you can enter MATLAB by double-clicking on the MATLAB shortcut icon (MATLAB 7.0.4) on your Windows desktop. When you start MATLAB, a special window called the MATLAB desktop appears. The desktop is a window that contains other windows. The major tools within or accessible from the desktop are:
+After logging into your account, you can enter MATLAB by double-clicking on the MATLAB shortcut icon on your Windows desktop. When you start MATLAB, a special window called the MATLAB desktop appears. The desktop is a window that contains other windows. The major tools within or accessible from the desktop are:
 
 - The Command Window
 - The Command History
@@ -54,9 +54,11 @@ Before we conclude this minimum session, Table 1.1 gives the partial list of ari
 To end your MATLAB session, type quit in the Command Window, or select File then Exit MATLAB in the desktop main menu.
 
 1.4	Getting started
+
 After learning the minimum MATLAB session, we will now learn to use some additional operations.
 
 1.4.1	Creating MATLAB variables
+
 MATLAB variables are created with an assignment statement. The syntax of variable as-signment is variable name = a value (or an expression)
 
 For example,
@@ -68,6 +70,7 @@ where expression is a combination of numerical values, mathematical operators, v
 - user-deflned functions
  
 1.4.2	Overwriting variable
+
 Once a variable has been created, it can be reassigned. In addition, if you do not wish to see the intermediate results, you can suppress the numerical output by putting a semicolon (;) at the end of the line. Then the sequence of commands looks like this:
 
 >>	t = 5;
@@ -75,16 +78,19 @@ Once a variable has been created, it can be reassigned. In addition, if you do n
 t = 6
 
 1.4.3	Error messages
+
 If we enter an expression incorrectly, MATLAB will return an error message. For example, in the following, we left out the multiplication sign, *, in the following expression
 
 >>	x = 10;
 >>	5x;
 
 1.4.4	Making corrections
+
 To make corrections, we can, of course retype the expressions. But if the expression is lengthy, we make more mistakes by typing a second time. A previously typed command can be recalled with the up-arrow key ". When the command is displayed at the command prompt, it can be modifled if needed and executed.
 
 1.4.5	Controlling the hierarchy of operations or precedence
-Let’s consider the previous arithmetic operation, but now we will include parentheses. For example, 1 + 2 £ 3 will become (1 + 2) £ 3
+
+Let’s consider the previous arithmetic operation, but now we will include parentheses. For example, 1+2x3 will become (1+2)x3
 
 >>	(1+2)*3;
 
@@ -92,13 +98,16 @@ and, from previous example
 
 >>	1+2*3;
 
-By adding parentheses, these two expressions give difierent results: 9 and 7.
+By adding parentheses, these two expressions give different results: 9 and 7.
 
-The order in which MATLAB performs arithmetic operations is exactly that taught in high school algebra courses. Exponentiations are done flrst, followed by multiplications and divisions, and flnally by additions and subtractions. However, the standard order of precedence of arithmetic operations can be changed by inserting parentheses. For example, the result of 1+2£3 is quite difierent than the similar expression with parentheses (1+2)£3. The results are 7 and 9 respectively. Parentheses can always be used to overrule priority, and their use is recommended in some complex expressions to avoid ambiguity. Therefore, to make the evaluation of expressions unambiguous, MATLAB has estab-lished a series of rules. The order in which the arithmetic operations are evaluated is given in below. MATLAB arithmetic operators obey the same precedence rules as those in most computer programs.
+The order in which MATLAB performs arithmetic operations is exactly that taught in high school algebra courses. Exponentiations are done flrst, followed by multiplications and divisions, and flnally by additions and subtractions. However, the standard order of precedence of arithmetic operations can be changed by inserting parentheses. For example, the result of 1+2x3 is quite difierent than the similar expression with parentheses (1+2)x3. The results are 7 and 9 respectively. Parentheses can always be used to overrule priority, and their use is recommended in some complex expressions to avoid ambiguity. Therefore, to make the evaluation of expressions unambiguous, MATLAB has estab-lished a series of rules. The order in which the arithmetic operations are evaluated is given in below. MATLAB arithmetic operators obey the same precedence rules as those in most computer programs.
 
-First:	The contents of all parentheses are evaluated flrst, starting from the innermost parentheses and working outward.
+First:	The contents of all parentheses are evaluated first, starting from the innermost parentheses and working outward.
+
 Second:	All exponentials are evaluated, working from left to right
+
 Third:	All multiplications and divisions are evaluated, working from left to right
+
 Fourth	All additions and subtractions are evaluated, starting from left to right
 	
 For operators of equal precedence, evaluation is from left to right. Now, consider another example in MATLAB:
@@ -111,6 +120,7 @@ or, if parentheses are missing,
 So here what we get: two different results. Therefore, we want to emphasize the importance of precedence rule in order to avoid ambiguity.
 
 1.4.6	Controlling the appearance of floating point number
+
 MATLAB by default displays only 4 decimals in the result of the calculations, for example -163.6667, as shown in above examples. However, MATLAB does numerical calculations in double precision, which is 15 digits. The command format controls how the results of computations are displayed. Here are some examples of the difierent formats together with the resulting outputs.
 
 >>	format short
@@ -134,6 +144,7 @@ and then ask about the value of x by typing,
 x = -163.6667
 
 1.4.7	Managing the workspace
+
 The contents of the workspace persist between the executions of separate commands. Therefore, it is possible for the results of one problem to have an efiect on the next one. To avoid this possibility, it is a good idea to issue a clear command at the start of each new inde-pendent calculation.
 
 >> clear
@@ -146,6 +157,7 @@ while, whos will give more details which include size, space allocation, and cla
 
 
 1.4.8	Keeping track of your work session
+
 It is possible to keep track of everything done during a MATLAB session with the diary command.
 
 >> diary
