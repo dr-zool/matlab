@@ -45,13 +45,10 @@ will result in x being given the value 1 + 2 £ 3 = 7. This variable name can al
 >>	4*x;
 
 Before we conclude this minimum session, Table 1.1 gives the partial list of arithmetic operators.
- 
-Symbol	Operation	Example
-		
-+	Addition	2 + 3
+-	Addition	2 + 3
 -	Subtraction	2 - 3
-*	Multiplication	2 * 3
-/	Division	2/3
+-	Multiplication	2 * 3
+-	Division	2/3
 		
 1.3.3	Quitting MATLAB
 To end your MATLAB session, type quit in the Command Window, or select File then Exit MATLAB in the desktop main menu.
@@ -66,13 +63,11 @@ For example,
 >> x = expression
 
 where expression is a combination of numerical values, mathematical operators, variables, and function calls. On other words, expression can involve:
-
-†	manual entry
-†	built-in functions
-†	user-deflned functions
+- manual entry
+- built-in functions
+- user-deflned functions
  
 1.4.2	Overwriting variable
-
 Once a variable has been created, it can be reassigned. In addition, if you do not wish to see the intermediate results, you can suppress the numerical output by putting a semicolon (;) at the end of the line. Then the sequence of commands looks like this:
 
 >>	t = 5;
@@ -99,10 +94,8 @@ and, from previous example
 
 By adding parentheses, these two expressions give difierent results: 9 and 7.
 
-The order in which MATLAB performs arithmetic operations is exactly that taught in high school algebra courses. Exponentiations are done flrst, followed by multiplications and divisions, and flnally by additions and subtractions. However, the standard order of precedence of arithmetic operations can be changed by inserting parentheses. For example, the result of 1+2£3 is quite difierent than the similar expression with parentheses (1+2)£3. The results are 7 and 9 respectively. Parentheses can always be used to overrule priority, and their use is recommended in some complex expressions to avoid ambiguity.
-Therefore, to make the evaluation of expressions unambiguous, MATLAB has estab-lished a series of rules. The order in which the arithmetic operations are evaluated is given in below. MATLAB arithmetic operators obey the same precedence rules as those in most computer programs.
+The order in which MATLAB performs arithmetic operations is exactly that taught in high school algebra courses. Exponentiations are done flrst, followed by multiplications and divisions, and flnally by additions and subtractions. However, the standard order of precedence of arithmetic operations can be changed by inserting parentheses. For example, the result of 1+2£3 is quite difierent than the similar expression with parentheses (1+2)£3. The results are 7 and 9 respectively. Parentheses can always be used to overrule priority, and their use is recommended in some complex expressions to avoid ambiguity. Therefore, to make the evaluation of expressions unambiguous, MATLAB has estab-lished a series of rules. The order in which the arithmetic operations are evaluated is given in below. MATLAB arithmetic operators obey the same precedence rules as those in most computer programs.
 
-[Precedence	Mathematical operations]
 First:	The contents of all parentheses are evaluated flrst, starting from the innermost parentheses and working outward.
 Second:	All exponentials are evaluated, working from left to right
 Third:	All multiplications and divisions are evaluated, working from left to right
@@ -176,9 +169,9 @@ c = 548.3170
 1.4.10	Miscellaneous commands
 
 Here are few additional useful commands:
-†	To clear the Command Window, type clc
-†	To abort a MATLAB computation, type ctrl-c
-†	To continue a line, type . . .
+- To clear the Command Window, type clc
+- To abort a MATLAB computation, type ctrl-c
+- To continue a line, type . . .
 
 1.4.11	Getting help
 To view the online documentation, select MATLAB Help from Help menu or MATLAB Help directly in the Command Window. The preferred method is to use the Help Browser. The Help Browser can be started by selecting the ? icon from the desktop toolbar. On the other hand, information about any command is available by typing
@@ -190,22 +183,22 @@ Another way to get help is to use the lookfor command. The lookfor command difie
 
 Note - At this particular time of our study, it is important to emphasize one main point. Because MATLAB is a huge program; it is impossible to cover all the details of each function one by one. However, we will give you information how to get help. Here are some examples:
 
-†	Use on-line help to request info on a speciflc function
+- Use on-line help to request info on a speciflc function
 
 >>	help sqrt
 
-†	In the current version (MATLAB version 7), the doc function opens the on-line version of the help manual. This is very helpful for more complex commands.
+- In the current version (MATLAB version 7), the doc function opens the on-line version of the help manual. This is very helpful for more complex commands.
 >>	doc plot
-†	Use lookfor to find functions by keywords. The general form is
+
+- Use lookfor to find functions by keywords. The general form is
+
 >>	lookfor FunctionName
 
 -------------------------------------------------------------------------------------------------------------------------------
 Chapter 2: Tutorial lessons 2
 
 2.1	Mathematical functions
-MATLAB offers many predeflned mathematical functions for technical computing which contains a large set of mathematical functions.
-
-Typing help elfun and help specfun calls up full lists of elementary and special functions respectively. There is a long list of mathematical functions that are built into MATLAB. These functions are called built-ins. Many standard mathematical functions, such as sin(x), cos(x), tan(x), ex, ln(x), are evaluated by the functions sin, cos, tan, exp, and log respectively in
+MATLAB offers many predeflned mathematical functions for technical computing which contains a large set of mathematical functions. Typing help elfun and help specfun calls up full lists of elementary and special functions respectively. There is a long list of mathematical functions that are built into MATLAB. These functions are called built-ins. Many standard mathematical functions, such as sin(x), cos(x), tan(x), ex, ln(x), are evaluated by the functions sin, cos, tan, exp, and log respectively in
 MATLAB. Table below lists some commonly used functions, where variables x and y can be numbers, vectors, or matrices.
 
 Elementary functions
@@ -220,7 +213,6 @@ sqrt(x)	Square root	rem(x)	Remainder after division
 log(x)	Natural logarithm	angle(x)	Phase angle
 log10(x)	Common logarithm	conj(x)	Complex conjugate
 			
-
 In addition to the elementary functions, MATLAB includes a number of predeflned constant values. A list of the most common values is given below.
 
 Pre-defined constant values
